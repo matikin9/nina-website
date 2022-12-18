@@ -1,0 +1,33 @@
+{
+  "name": "nina-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:eleventy": "npx rimraf docs && npx @11ty/eleventy",
+    "watch:eleventy": "npx @11ty/eleventy --serve",
+    "build:sass": "sass src/css/sass:src/css",
+    "watch:sass": "sass --watch src/css/sass:src/css",
+    "prod:build": "NODE_ENV=prod npm run clean:build",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:*",
+    "debug": "DEBUG=* npx @11ty/eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matikin9/nina-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matikin9/nina-website/issues"
+  },
+  "homepage": "https://github.com/matikin9/nina-website#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.56.1"
+  }
+}

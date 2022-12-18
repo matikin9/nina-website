@@ -1,0 +1,169 @@
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0 20px 30px 20px;
+  min-width: 300px;
+  font: 400 1.25em "Montserrat", sans-serif;
+  color: #333;
+}
+
+p {
+  margin-bottom: 2em;
+  line-height: 1.5;
+}
+
+h1 {
+  font: 400 2.5em "Sail", serif;
+  color: #20a1bb;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: "Arima Madurai", serif;
+  font-weight: 400; 
+}
+
+a, a:visited {
+  color: #20a1bb;
+}
+
+a:hover {
+  color: #15697a;
+}
+
+#profile-img {
+  float: right;
+  width: 125px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+  
+.img-half-width {
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px #649099;
+}
+
+
+.gallery-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  
+  div {
+    width: 400px;
+    border: solid 10px #abe9f6;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    box-shadow: 5px 5px 10px #91b5bd;
+    border-radius: 20px;
+    font-size: larger;
+    font-weight: bold;
+
+    img {
+      width: 300px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+  }
+}
+
+.modal-target:hover {
+  opacity: 0.7;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  opacity: 1 !important;
+  max-width: 1200px;
+}
+
+.modal-caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 1200px;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+  margin-top: 32px;
+}
+/* Add Animation */
+.modal-content, .modal-caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-atransform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-popup {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #fff;
+
+  img {
+    width: 100% !important;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .img-half-width {
+    width: 50%;
+    float: right;
+    margin-left: 20px;
+  }
+}

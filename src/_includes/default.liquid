@@ -1,0 +1,22 @@
+---
+css:
+  - 'https://fonts.googleapis.com/css?family=Arima+Madurai|Montserrat|Sail'
+  - '/css/styles.css'
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include 'head' %}
+
+  <body>
+    {% include 'header' %}
+
+    {{ content }}
+
+    {% for file in js-footer %}
+      <script src="{{ file | url }}"></script>
+    {% endfor %}
+
+  </body>
+</html>
