@@ -11,7 +11,7 @@ module.exports = function(eleventyConfig) {
 	// });
 
 	return {
-		pathPrefix: "/nina-website/",
+		pathPrefix: isProduction ? "" : "/nina-website/",
 		dir: {
             input: "src",
 			output: "docs"
