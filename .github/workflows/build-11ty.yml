@@ -8,7 +8,7 @@
 name: Build 11ty-web-template for Production
 
 on:
-  pull_request:
+  push:
     branches:
       - main
 

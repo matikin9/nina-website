@@ -9,6 +9,7 @@
     "watch:eleventy": "npx @11ty/eleventy --serve",
     "build:sass": "sass src/css/sass:src/css",
     "watch:sass": "sass --watch src/css/sass:src/css",
+    "clean:build": "npm run build:sass && npm run build:eleventy",
     "prod:build": "NODE_ENV=prod npm run clean:build",
     "start": "npm-run-all build:sass --parallel watch:*",
     "build": "npm-run-all build:*",
